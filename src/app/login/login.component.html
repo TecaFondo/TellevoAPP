@@ -1,3 +1,24 @@
-<p>
-  login works!
-</p>
+<!-- Fade Header with collapse header -->
+<ion-header collapse="fade" [translucent]="true">
+    <ion-toolbar>
+        <ion-item>
+            <ion-title *ngIf>Login</ion-title>
+        </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Login</ion-title>
+        </ion-toolbar>
+
+    </ion-header>
+    <div class="content">
+        <ion-input placeholder="Usuario" id="UserLog"></ion-input>
+        <ion-input placeholder="****" type="password" id="UserLog"></ion-input>
+        <div id="login-button">
+            <ion-button id="login-button" color="light" id="loginButton">Login</ion-button>
+        </div>
+    </div>
+</ion-content>
