@@ -1,8 +1,14 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Sign-up</ion-title>
+    </ion-toolbar>
+</ion-header>
+
 <!-- Fade Header with collapse header -->
 <ion-header collapse="fade" [translucent]="true">
     <ion-toolbar *ngIf="ios">
         <ion-item>
-            <ion-title>Bienvenido</ion-title>
+            <ion-title>Sign-up</ion-title>
         </ion-item>
     </ion-toolbar>
 </ion-header>
@@ -10,36 +16,39 @@
 <ion-content [fullscreen]="true">
     <ion-header collapse="condense">
         <ion-toolbar>
-            <ion-title size="large">Signup</ion-title>
+            <ion-title size="large">Sign-up</ion-title>
         </ion-toolbar>
     </ion-header>
-    <div class="content">
-        <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()">
-            <ion-grid>
-                <ion-row>
-                    <ion-col>
-                        <p>Nombre: </p>
-                    </ion-col>
-                    <ion-col>
-                        <ion-input type="text" placeholder="Ingrese Nombre" id="UserLog" name="nombre" [(ngModel)]="usuario.nombre" minlength="3" maxlength="6" required></ion-input>
-                    </ion-col>
-                </ion-row>
-                <ion-row>
-                    <ion-col>
-                        <p>Contraseña: </p>
-                    </ion-col>
-                    <ion-col>
-                        <ion-input type="password" placeholder="******" id="UserLog" name="password" [(ngModel)]="usuario.password" minlength=4 maxlength="4" required></ion-input>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
 
-            <div id="login-button">
-                <ion-button id="login-button" type="submit" color="light" id="loginButton" [disabled]="formulario.invalid">Login</ion-button>
-                <br>
-                <a href="">Crea tu cuenta Gratis!</a>
-            </div>
-        </form>
+    <ion-content [fullscreen]="true">
 
-    </div>
-</ion-content>
+        <div class="content">
+            <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col>
+                            <p>Nombre: </p>
+                        </ion-col>
+                        <ion-col>
+                            <ion-input type="text" placeholder="Ingrese Nombre" id="UserLog" name="nombre" [(ngModel)]="usuario.nombre" minlength="3" maxlength="6" required></ion-input>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <p>Contraseña: </p>
+                        </ion-col>
+                        <ion-col>
+                            <ion-input type="password" placeholder="******" id="UserLog" name="password" [(ngModel)]="usuario.password" minlength=4 maxlength="4" required></ion-input>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+
+                <div id="login-button">
+                    <ion-button id="login-button" type="submit" color="light" id="loginButton" [disabled]="formulario.invalid">Login</ion-button>
+                    <br>
+                    <a href="">Crea tu cuenta Gratis!</a>
+                </div>
+            </form>
+
+        </div>
+    </ion-content>
