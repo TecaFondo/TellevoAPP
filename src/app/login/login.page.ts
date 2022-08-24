@@ -11,14 +11,22 @@ export class LoginPage {
   ios: boolean; //esto es para detectar cuando un dispositivo es iOS
   android: boolean; //same with android
 
-  usuario={ //se declara un usuario para validar
+
+  usuario={
     nombre:'',
     password:''
-  };
+  }
+
+  constructor() { }
 
   constructor(public platform: Platform) { //valida tipo dispositivo (android o ios)
     this.ios = platform.is('ios');
     this.android = platform.is('android');
+
+  onSubmitTemplate(){
+    console.log('Form Submited');
+    console.log(this.usuario);
+  }
 
 }
 
