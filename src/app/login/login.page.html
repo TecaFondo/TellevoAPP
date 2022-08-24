@@ -4,29 +4,40 @@
     </ion-toolbar>
 </ion-header>
 
-<!-- Fade Header with collapse header -->
-<ion-header collapse="fade" [translucent]="true">
-    <ion-toolbar *ngIf="ios">
-        <ion-item>
-            <ion-title>Login</ion-title>
-        </ion-item>
-    </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Login</ion-title>
-        </ion-toolbar>
-
-    </ion-header>
+    <h1 class="h">Skeleton App</h1>
+    <h5 class="h">Aqui comienza todo</h5>
+    <br>
+    <br>
+    <h3 class="h">Bienvenidos!</h3>
+    <br>
     <div class="content">
-        <ion-input placeholder="Usuario" id="UserLog"></ion-input>
-        <ion-input placeholder="****" type="password" id="UserLog"></ion-input>
-        <div id="login-button">
-            <ion-button id="login-button" color="light" id="loginButton">Login</ion-button>
+
+        <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()">
+
+            <ion-label>Nombre</ion-label>
+
+            <ion-input class="lin" type="text" placeholder="Ingrese Nombre" id="UserLog" name="nombre" [(ngModel)]="usuario.nombre" minlength="3" maxlength="6" required></ion-input>
+
             <br>
-            <a href="/signup">Crea tu cuenta Gratis!</a>
-        </div>
+            <ion-label>Contraseña</ion-label>
+            <ion-input class="lin" ng-pattern="/^([0-9])$/" type="password" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,''),alert('Ingresar solo Números')" placeholder=" ****** " id="UserLog " name="password " [(ngModel)]="usuario.password "
+                minlength="4 " maxlength="4 " required></ion-input>
+            <br>
+            <div id="b ">
+                <ion-button id="b " expand="full " type="submit " color="light " [disabled]="formulario.invalid ">Ingresar</ion-button>
+            </div>
+        </form>
+
     </div>
+
+    <br>
+    <br>
+    <div id="u">
+        <a href="/registro ">Crea tu cuenta gratis</a>
+    </div>
+
+
+
 </ion-content>
