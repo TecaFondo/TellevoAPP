@@ -21,10 +21,11 @@
 
             <br>
             <ion-label>Contraseña</ion-label>
-            <ion-input class="lin" type="password" placeholder="******" id="UserLog" name="password" [(ngModel)]="usuario.password" minlength="2" maxlength="4" required></ion-input>
+            <ion-input class="lin" ng-pattern="/^([0-9])$/" type="password" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,''),alert('Ingresar solo Números')" placeholder=" ****** " id="UserLog " name="password " [(ngModel)]="usuario.password "
+                minlength="4 " maxlength="4 " required></ion-input>
             <br>
-            <div id="b">
-                <ion-button id="b" expand="full" type="submit" color="light" [disabled]="formulario.invalid">Ingresar</ion-button>
+            <div id="b ">
+                <ion-button id="b " expand="full " type="submit " color="light " [disabled]="formulario.invalid ">Ingresar</ion-button>
             </div>
         </form>
 
@@ -33,7 +34,7 @@
     <br>
     <br>
     <div id="u">
-        <a href="/registro">Crea tu cuenta gratis</a>
+        <a href="/registro ">Crea tu cuenta gratis</a>
     </div>
 
 

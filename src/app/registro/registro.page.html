@@ -3,85 +3,80 @@
         <ion-title>registro</ion-title>
     </ion-toolbar>
 </ion-header>
-Skeleton App
-<ion-content>
 
-    <h1 class="h">Bienvenido!</h1>
-    <h6>Usuario:</h6>
-    <h3 class="h">Información Adicional</h3>
+<ion-content class="contenido">
+    <main>
+        <form #actionForm="ngForm" (ngSubmit)="onSubmitCrear()">
+            <h1 class="h">Bienvenido!</h1>
+            <h6>Usuario:</h6>
+            <h3 class="h">Información Adicional</h3>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <p class="registro">Nombre</p>
+                    </ion-col>
+                    <ion-col>
+                        <ion-input class="bor" type="text" placeholder="Ingrese nombre" [(ngModel)]="nombre"></ion-input>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
 
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <p class="registro">Nombre</p>
-            </ion-col>
-            <ion-col>
-                <ion-input class="bor" type="text" placeholder="Ingrese nombre" [(ngModel)]="nombre"></ion-input>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <p class="registro">Apellido</p>
-            </ion-col>
-            <ion-col>
-                <ion-input class="bor" placeholder="Ingrese apellido"></ion-input>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
-
-    <br>
-
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <p>Nivel Educación</p>
-            </ion-col>
-            <ion-col>
-                <ion-list>
-                    <ion-item>
-                        <ion-select placeholder="Seleccione Nivel">
-                            <ion-select-option value="Básica">Básica</ion-select-option>
-                            <ion-select-option value="Media">Media</ion-select-option>
-                            <ion-select-option value="Superior">Superior</ion-select-option>
-                        </ion-select>
-                    </ion-item>
-                </ion-list>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
-    <br>
-
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <p>Fecha de Nacimiento</p>
-            </ion-col>
-            <ion-col>
-                <ion-datetime presentation="date"></ion-datetime>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
-
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-                <ion-button color="light">Limpiar</ion-button>
-            </ion-col>
-            <ion-col>
-                <ion-button color="light">Mostrar</ion-button>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <p class="registro">Apellido</p>
+                    </ion-col>
+                    <ion-col>
+                        <ion-input class="bor" placeholder="Ingrese apellido"></ion-input>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
 
 
-    <ion-icon name="calendar-number-outline"></ion-icon>
+            <br>
 
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <p>Nivel Educación</p>
+                    </ion-col>
+                    <ion-col>
+                        <ion-list>
+                            <ion-item>
+                                <ion-select placeholder="Seleccione Nivel">
+                                    <ion-select-option value="Básica">Básica</ion-select-option>
+                                    <ion-select-option value="Media">Media</ion-select-option>
+                                    <ion-select-option value="Superior">Superior</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </ion-list>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
 
-    <ion-footer class="fot">App desarrollada por</ion-footer>
+            <br>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <p>Fecha de Nacimiento</p>
+                    </ion-col>
+                    <ion-col>
+                        <ion-datetime class="fecha" presentation="date" size="cover" [preferWheel]="true"></ion-datetime>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-button type="reset" color="light">Limpiar</ion-button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button color="light">Mostrar</ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </form>
+    </main>
 
 </ion-content>
