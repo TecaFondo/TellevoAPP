@@ -55,17 +55,17 @@
             </ion-grid>
 
             <br>
+            <ion-item class="popCalendar">
+                <ion-label>Pick date</ion-label>
+                <ion-input value="{{ date | date: 'dd.mm.yyyy' }}" id="date" class="ion-text-end" size="cover"></ion-input>
+                <ion-popover trigger="date" size="cover" side="left" alignment="center">
+                    <ng-template>
+                        <ion-datetime class="fecha" [(ngModel)]="date" presentation="date" [preferWheel]="true"></ion-datetime>
+                        <!--ion-datetime presentation="date"  ></ion-datetime-->
+                    </ng-template>
+                </ion-popover>
+            </ion-item>
 
-            <ion-grid>
-                <ion-row>
-                    <ion-col>
-                        <p>Fecha de Nacimiento</p>
-                    </ion-col>
-                    <ion-col>
-                        <ion-datetime class="fecha" presentation="date" size="cover" [preferWheel]="true"></ion-datetime>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
             <ion-grid>
                 <ion-row>
                     <ion-col>
